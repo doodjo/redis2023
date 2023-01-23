@@ -1,0 +1,193 @@
+/* TABELA */
+
+#customers{
+    font-family: "Inter", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+#customers td, #customers th {
+    border: 1px solid black;
+    padding: 8px;
+    align-items: center;
+}
+
+#customers tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #0026ff;;
+    color: white;
+    text-align: center;
+    
+}
+
+
+.sub {
+    border-radius: 6px;
+    border: none;
+    padding: 0.5rem 2.5rem;
+    font-family: "Inter", sans-serif; 
+    font-size: 1rem;
+    margin: 2px;
+    background-color: #0026ff; 
+    cursor: pointer; 
+    color: #fff;
+}
+
+.sub:hover{
+    background-color: #fffcf0;
+    color: #0026ff;
+    transition: color 0.3s ease-in-out;
+}
+
+.tabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.naslovTabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+
+    max-width: 40rem;
+    margin: 2px;
+    padding: 1rem;
+    color: #000;
+    justify-content: space-between;
+    border-radius: 6px 6px 0px 0px;
+}
+
+/* copy-paste ZA NAV */
+
+body {
+    min-height: 75rem;
+    margin: 0;
+}
+.ulist{
+    display:flex;
+    flex-direction: row;
+    align-items:flex-start;
+    text-decoration: none;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    background-color: #0026ff;
+    text-align: center;
+    color: #fffcf0;
+    border: none;  
+} 
+
+.list a {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-family: "Inter", sans-serif; 
+    
+  } 
+
+
+.list a:hover:not(.active) {
+    background-color: #fffcf0;
+    color: #0026ff;
+    transition: color 0.7s ease-in-out;
+}
+  
+.active {
+    background-color: #001aaa;
+}
+
+
+/* FORUM NASLOV */
+
+#FORUM{
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-size:x-large;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem ;
+}
+
+/* VEZANO ZA POST FORMU */
+.form-details {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px solid #0026ff;  
+
+
+
+  }
+
+/* VEZANO ZA POST FORMU */
+.form-control{
+    
+    padding: 1rem 1rem;
+    margin: 0.2rem 0.2rem;
+    font-family: "Inter", sans-serif; 
+    border: 10px solid #0026ff;
+    color: #000000;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+
+
+}
+
+
+#i{
+    border: 1px solid black;
+    max-width: 680px;
+
+}
+
+/* SUBMIT BTN */
+
+#submit{
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    padding: 1rem 1rem;
+    font-family: "Inter", sans-serif; 
+    font-size: 1rem;
+    margin: 0%;
+    background-color: #0026ff; 
+    cursor: pointer; 
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#submit:hover{
+    background-color: #fffcf0;
+    color: #0026ff;
+    transition: color 0.3s ease-in-out;
+}
+
+
+

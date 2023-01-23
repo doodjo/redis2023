@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>{{ title }}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/todo.css') }}" />
+
+        {% block head_content %} {% endblock %}
+    </head>
+    
+    <body class="text-center">
+
+            <ul class="ulist">
+                <li class="list"><a class="active" href="/">Home</a></li>
+                <li class="list"><a href="/all">Forum</a></li>
+                <li class="list"><a href="/latest">Latest</a></li>
+                <li class="list"><a href="/todo">To Do</a></li>
+                <li class="list"><a href="/logger">Logger</a></li>
+            </ul>
+    
+    
+        <!--////////////////////////////////////////////////////////// -->
+        <br> <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+          <span>{{ message }}</span>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    
+        <!--////////////////////////////////////////////////////////// -->
+
+
+        <header class="header">
+            <h1 class="header__logo"><a href="{{ url_for('index') }}" class="header__link">To-Do</a></h1>
+            {% if "add" not in request.endpoint %}
+                <a href="{{ url_for('add_habit') }}" class="header__link">+ Add ToDo</a>
+            {% endif %}
+        </header>
+
+        <main class="main">
+            <section class="dates">
+                {% for date in date_range(selected_date) %}
+                    <a 
+                        class="dates__link {{ 'dates__link--current' if loop.index0 == 3 else ''}}"
+                        href="{{ url_for('index', date=date) }}"
+                    >
+                        <time class="date" datetime="{{ date }}">
+                            <span>{{ date.strftime("%a") }}</span>
+                            <span>{{ date.strftime("%d") }}</span>
+                        </time>
+                    </a>
+                {% endfor %}
+            </section>
+
+            {% block main_content %}
+            {% endblock %}
+        </main>
+    </body>
+</html>

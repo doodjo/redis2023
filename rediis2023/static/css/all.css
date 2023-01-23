@@ -1,0 +1,135 @@
+/* copy-paste ZA NAV */
+
+body {
+    min-height: 75rem;
+    margin: 0;
+}
+.ulist{
+    display:flex;
+    flex-direction: row;
+    align-items:flex-start;
+    text-decoration: none;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    background-color: #0026ff;
+    text-align: center;
+    color: #fffcf0;
+    border: none;  
+} 
+
+.list a {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-family: "Inter", sans-serif; 
+    
+} 
+
+
+.list a:hover:not(.active) {
+    background-color: #fffcf0;
+    color: #0026ff;
+    transition: color 0.7s ease-in-out;
+}
+  
+.active {
+    background-color: #001aaa;
+}
+
+/* TABELA SVIH OBJAVA */
+#ppl{
+
+    font-family: "Inter", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: stretch;
+    margin: 10px;   
+    
+}
+
+  
+#ppl td, #ppl th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    display: flex;
+    align-items: stretch;
+}
+  
+#ppl tr:nth-child(even){background-color: #f2f2f2;}
+  
+#ppl tr:hover {background-color: #ddd;}
+  
+#ppl th {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0026ff;;
+    color: white;
+    text-transform: uppercase;
+}
+
+.elem{
+    list-style-type: none;
+    margin: 20% 40%;
+    padding: 0;
+}
+
+tbody{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+/* NASLOV */
+
+.naslov{
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-size:x-large;    
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+}
+
+.podnaslov{
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-size:medium;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+/* PODACI U TABELI */
+
+.data{
+    font-family: "Inter", sans-serif;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    list-style-position: inside;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #0026ff;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/latest.css') }}">
+</head>
+
+<body>
+    <ul class="ulist">
+        <li class="list"><a class="active" href="/">Home</a></li>
+        <li class="list"><a href="/all">Forum</a></li>
+        <li class="list"><a href="/latest">Latest</a></li>
+        <li class="list"><a href="/todo">To Do</a></li>
+        <li class="list"><a href="/logger">Logger</a></li>
+    </ul>
+  
+  <h1 class="naslov"> FORUM</h1>
+  
+  <h4 class="podnaslov">POSLEDNJE TRI OBJAVE</h4>
+  <hr>
+  <br>
+
+  {% for k,v in posts.items() %}
+  <table class="ppl" id="ppl">
+    <tr>
+      <th class="th">Objave</th>
+    </tr>
+    <tr class="tr">
+      <td class="td">
+        {{k}}
+      </td>   
+      <td class="td">
+        je objavio/la :
+      </td>
+      <td class="td">
+        {{v}}
+      </td>
+    </tr>
+  </table>
+  {% endfor %}
+
+
+</body>
+</html>

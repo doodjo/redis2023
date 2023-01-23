@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLocate</title>
+    <link hrel="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body class="text-center">
+
+        <ul class="ulist">
+            <li class="list"><a class="active" href="/">Home</a></li>
+            <li class="list"><a href="/all">Forum</a></li>
+            <li class="list"><a href="/latest">Latest</a></li>
+            <li class="list"><a href="/todo">To Do</a></li>
+            <li class="list"><a href="/logger">Logger</a></li>
+        </ul>
+
+
+    <!--////////////////////////////////////////////////////////// -->
+    <br> <br>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+      <span>{{ message }}</span>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <!--////////////////////////////////////////////////////////// -->
+
+    <main>
+        <form class="form-details" method="POST">
+
+            <h1 id="FORUM" class="h3 mb-3 font-weight-normal">Forum</h1>
+
+
+        
+            <input type="text" name="full_name" class="form-control" id="i" placeholder="Unesite ime:" required autofocus>
+        
+            <textarea class="form-control" name="data" rows="3" id="i" placeholder="Detaljan opis..."></textarea>
+        
+            <button class="btn btn-lg btn-primary btn-block" id="submit" type="submit">Postavi</button>
+            
+          </form>
+
+
+          <div class="tabela">
+            <h3 class="naslovTabela">Tabela dostupnih lokacija</h3>
+            <table id="customers" style="width:100%">
+                <tr>
+                    <th>Grad</th>
+                    <th>Država</th>
+                    <th>BrojStanovnika</th>
+                    <th>Sub</th>
+                    <th>Like</th>
+                    <th>NumberOfLikes</th>
+                    
+                </tr>
+                <tr>
+                    <td>Melburn</td>
+                    <td>Viktorija</td>
+                    <td> 4.246.345 </td>
+                    <td><button id="subMelburn" class="sub">Sub</button></td>
+                    <td><input type="submit" class="sub" value="LIKEM" name="action1"></td>
+                    <td name="lajkoviMelburn"> {{lajkoviMelburn }} </td>
+
+                </tr>
+                <tr>
+                    <td>Kanbera</td>
+                    <td>Novi Južni Vels</td>
+                    <td> 411.609 </td>
+                    <td><button id="subKanbera" class="sub">Sub</button></td>
+                    <td><input type="submit" class="sub" value="LIKEK" name="action1"></td>
+                    <td name="lajkoviKanbera"> {{lajkoviKanbera }} </td>
+
+                </tr>
+                <tr>
+                    <td>Pert</td>
+                    <td>Zapadna Australija</td>
+                    <td> 1.897.548 </td>
+                    <td><button id="subPert" class="sub">Sub</button></td>
+                    <td><input type="submit" class="sub" value="LIKEP" name="action1"></td>
+                    <td name="lajkoviPert"> {{lajkoviPert }} </td>
+
+                </tr>
+                <tr>
+                    <td>Sidnej</td>
+                    <td>Novi Južni Vels</td>
+                    <td> 5,057,000 </td>
+                    <td><button id="subSidnej" class="sub">Sub</button></td>
+                    <td><input type="submit" class="sub" value="LIKES" name="action1"></td>
+                    <td name="lajkoviSidnej"> {{lajkoviSidnej }} </td>
+
+
+
+                </tr>
+              </table>
+          </div>
+
+
+    </main>
+</body>
+</html>

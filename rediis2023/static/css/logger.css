@@ -1,0 +1,109 @@
+/* copy-paste ZA NAV */
+
+body {
+    min-height: 75rem;
+    margin: 0;
+}
+.ulist{
+    display:flex;
+    flex-direction: row;
+    align-items:flex-start;
+    text-decoration: none;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    background-color: #0026ff;
+    text-align: center;
+    color: #fffcf0;
+    border: none;  
+} 
+
+.list a {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-family: "Inter", sans-serif; 
+    
+  } 
+
+
+.list a:hover:not(.active) {
+    background-color: #fffcf0;
+    color: #0026ff;
+    transition: color 0.7s ease-in-out;
+}
+  
+.active {
+    background-color: #001aaa;
+}
+
+h3, h1{
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-size:x-large;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem ;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-size:x-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin: 0;
+    padding: 0 4rem;
+}
+
+
+.form-details {
+    width: 100%;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+
+}
+
+input, label.textbox{
+    font-family: "Inter", sans-serif;
+}
+
+button{
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    padding: 0.5rem 4rem;
+    font-family: "Inter", sans-serif; 
+    font-size: 1rem;
+    margin: 0%;
+    background-color: #0026ff; 
+    cursor: pointer; 
+    color: #fff;
+    text-transform: uppercase;
+}
+
+button:hover{
+    background-color: #fffcf0;
+    color: #0026ff;
+    transition: color 0.3s ease-in-out;
+    
+}
+
+.del{
+    margin-top: 2rem;
+    text-transform: none;
+}
+
+#map{
+    height: 400px;
+    width: 100%;
+  }

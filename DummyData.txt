@@ -1,0 +1,46 @@
+#################################FORUM I LATEST#################################
+
+Dusan
+A 17% congestion level means that on average, travel times were 17% longer than during the baseline non-congested conditions. This means that a 30-minute trip driven in free-flow condition will take 5 minutes longer when the congestion level is at 17%.
+
+Natalija
+Motorists are advised of changed traffic conditions on Sydney Harbour Bridge this week.
+The Sydney Harbour Bridge will close in both directions on Sunday 22 January from 3am to 10am to facilitate filming for the new Ryan Gosling film, The Fall Guy, while the Sydney Harbour Tunnel will remain open while filming is underway.
+
+Dusan
+Sydney update, Motorways are now clear!
+
+Natalija
+From Sunday 22 to Wednesday 25 January, the Cahill Expressway will also be closed northbound between Conservatorium Road and Upper Fort Street from 10pm to 4am for maintenance works.
+
+
+Bob
+Dozens of emergency services responded to the crash site In Wuraming, near Boddington, after an Indian motorbike carrying a passenger struck the rear end of a Toyota Hilux , about 3.40pm on Friday.
+
+Dusan 
+Perth update, all clear!
+
+
+#################################GEO#################################
+
+Pert
+-31.953512	
+115.857048
+
+Sidnej
+-33.870453
+ 151.208755
+
+Melburn
+-37.663712
+144.844788
+
+Kanbera
+ -35.282001
+ 149.128998
+
+Adelejd (default marker, ne mora da se unosi, može biti obrisan i onda se mapa ne učitava)
+-34.921230
+138.599503
+
+

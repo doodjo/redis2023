@@ -1,0 +1,106 @@
+<html>
+
+<head>
+  <title>Add Map</title>
+   <!-- Bootstrap CSS -->
+   <link hrel="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/logger.css') }}">
+
+  
+
+  <script>
+
+    async function loadLocations() {
+      return (await fetch("/data")).json();
+    }
+
+    async function lastLocation() {
+      return (await fetch("/last")).text();
+    }
+    // Initialize and add the map
+    async function initMap() {
+
+      let geoPoints = await loadLocations();
+      console.log("ALl Data", geoPoints);
+
+      let locName = Object.keys(geoPoints);
+      console.log("Key Values", locName);
+
+      let name = await lastLocation();
+      console.log("latest loc", name);
+
+
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 6,
+        center: geoPoints[name],
+      });
+
+      for (locName in geoPoints) {
+
+        const coord = geoPoints[locName]
+        const marker = new google.maps.Marker({
+          position: coord,
+          map: map,
+        });
+
+      }
+
+
+    }
+  </script>
+
+
+</head>
+
+<body>
+
+
+
+
+  <ul class="ulist">
+    <li class="list"><a class="active" href="/">Home</a></li>
+    <li class="list"><a href="/all">Forum</a></li>
+    <li class="list"><a href="/latest">Latest</a></li>
+    <li class="list"><a href="/todo">To Do</a></li>
+    <li class="list"><a href="/logger">Logger</a></li>
+  </ul>
+
+
+  <br>
+  <center>
+
+    <h1> City Logging </h1>
+    <br>
+    
+    <div id="map"></div>
+
+    <h3>Unesite podatke kako biste dodali lokaciju</h3>
+
+
+    <form class="form-details" action="/add-marker" method="POST">
+      <br>
+      <label for="name" class="textbox">Lokacija</label>
+      <input type="text" name="lname"><br><br>
+      <label for="latitude" class="textbox">Latitude</label>
+      <input type="number" step=any name="latitude"><br><br>
+      <label for="longitude" class="textbox">Longitude</label>
+      <input type="number" step=any name="longitude"><br><br>
+      <button input="submit" class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
+    </form>
+
+    <form class="form-details" action="/del-marker" method="DELETE">
+      <br>
+      <button input="submit" class="btn btn-lg btn-primary btn-block" type="submit">Delete All Locations</button>
+    </form>
+    
+    
+
+  </center>
+
+  <script 
+  src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=&v=weekly" 
+  async></script>
+  
+</body>
+
+</html>
